@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+:root {
+    --bg-color: rgb(209, 203, 203);
+    --word-color: black;
+    --accent-color: #B2AC88;
+    --footer-color: #b2ac8865;
+    --other-grad: white;
+    --special-bg: transparent;
+    --shape-color: #b2ac8863;
+    --gradient: radial-gradient(circle,var(--other-grad), var(--bg-color));
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--gradient);
+}
+/* Pointing */
+/* #pointer {
+    
+} */
+/* Navigation */
+nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    top: 150px;
+    font-size: larger;
+    
+}
+nav a {
+    text-decoration: none;
+    color: var(--word-color);
+}
+/* header */
+#header {
+    background-color: var(--bg-color);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+}
+/* First thing */
+#first {
+    display: flex;
+    top: 155px;
+    right: 250px;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+}
+#first div:nth-child(1) {
+    background-color: var(--accent-color);
+    width: 600px;
+    height: 600px;
+    clip-path: polygon(30% 50%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+
+}
+#first div:nth-child(2) {
+    position: relative;
+    top: 150px;
+    left: 30px;
+    font-size: 50px;
+    color: grey;
+    text-decoration: underline var(--accent-color);
+    
+}
+/* Second Thing */
+#secondHeader div:nth-child(1) {
+    background-color: var(--accent-color);
+    
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    position: relative;
+    top: 200px;
+    left: 50%;
+    width: 70%;
+    height: 200px;
+}
+#secondHeader:hover  div:nth-child(1) {
+   left: 30%;
+   transition: 500ms ease-in;
+}
+#secondHeader:hover  div h1 {
+   right: 600px;
+   transition: 500ms ease-in;
+}
+#secondHeader div h1 {
+    z-index: 3;
+    color: var(--other-grad);
+    position: relative;
+    text-align: right;
+    font-size: 70px;
+    right: 300px;
+}
+#second {
+    background-color: var(--other-grad);
+    margin: 50px;
+    margin-bottom: 200px;
+    padding: 50px;
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+}
+/* Third */
+#thirdLine {
+    background-color: var(--accent-color);
+    width: 1000px;
+    height: 30px;
+    left: 15%;
+    margin-bottom: 50px;
+    position: relative;
+    
+}
+#thirdHeader {
+    color: grey;
+    font-size: 30px;
+    text-align: center;
+}   
+#check {
+    margin-bottom: 100px;
+}
+#check  > h1{
+    top: 90px;
+    position: relative;
+    padding-left: 10px;
+}
+#form {
+    position: relative;
+    background-color: var(--accent-color);
+   color: var(--other-grad);
+    padding: 20px;
+    
+}
+#form button {
+    margin-top: 4px;
+    font-size: 17px;
+    background-color: transparent;
+    color: var(--other-grad);
+    border: var(--other-grad) solid;
+}
+#form button:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+#form input {
+    font-size: 20px;
+}
+#form input:focus {
+    background-color: var(--accent-color);
+    color: var(--other-grad);
+}
+#inter {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 80px;
+}
+#sites {
+    position: relative;
+    color: var(--other-grad);
+    background-color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+}
+#sites a {
+    text-decoration: none;
+    color: var(--other-grad);
+    border: var(--other-grad) solid;
+    padding: 2px;
+}
+#sites a:hover {
+    background-color: var(--accent-color);
+}
+#sites:hover, #form:hover{
+    transform: rotateX(15deg) rotateY(15deg);
+    background-color: var(--accent-color);
+    transition: 500ms linear;
+   
+}
+/* fourth */
+
+
+
+
+/* Opening Name thing */
+.specialName {
+    position: absolute;
+    width: 510px;
+    color: var(--accent-color);
+    z-index: 5;
+}
+.specialName h1 {
+    position: absolute;
+    top: 40px;
+    left: 150%;
+    transform: translate(-50%,-50%);
+    margin: 10;
+    padding: 0;
+    width: 100%;
+    
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.specialName h1:nth-child(2) {
+    color: white;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    background: var(--special-bg);
+}
+.specialName h1:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.specialName h1:nth-child(1):hover ~ h1 {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+/* Animated background */
+.bg {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.filler {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: transparent;
+}
+.shape {
+    position: absolute;
+    bottom: -100px;
+    background: var(--shape-color);
+    animation: shapes 10s infinite ease-in-out;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.shape:nth-child(1) {
+    width: 75px;
+    height: 75px;
+    left: 7%;
+    animation: shapes 10s infinite ease-in-out;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+
+    
+}
+.shape:nth-child(2) {
+    width: 75px;
+    height: 75px;
+    left: 12%;
+    animation: shapes 15s infinite ease-in-out;
+}
+.shape:nth-child(3) {
+    width: 75px;
+    height: 75px;
+    left: 33%;
+    animation: shapes 11s infinite ease-in-out;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.shape:nth-child(4) {
+    width: 75px;
+    height: 75px;
+    left: 42%;
+    animation: shapes 17s infinite ease-in-out;
+}
+.shape:nth-child(5) {
+    width: 75px;
+    height: 75px;
+    left: 67%;
+    animation: shapes 20s infinite ease-in-out;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.shape:nth-child(6) {
+    width: 75px;
+    height: 75px;
+    left: 56%;
+    animation: shapes 8s infinite ease-in-out;
+}
+.shape:nth-child(7) {
+    width: 75px;
+    height: 75px;
+    left: 92%;
+    animation: shapes 19s infinite ease-in-out;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.shape:nth-child(8) {
+    width: 75px;
+    height: 75px;
+    left: 11%;
+    animation: shapes 25s infinite ease-in-out;
+}
+.shape:nth-child(9) {
+    width: 75px;
+    height: 75px;
+    left: 34%;
+    animation: shapes 13s infinite ease-in-out;
+    
+}
+.shape:nth-child(10) {
+    width: 75px;
+    height: 75px;
+    left: 76%;
+    animation: shapes 17s infinite ease-in-out;
+}
+
+@keyframes shapes {
+   
+    0% {
+        bottom: 100%;
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    100% {
+        bottom: -100px;
+    }
+}
